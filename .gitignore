@@ -1,4 +1,10 @@
+*.pyc
+*.db
+.*
+
 __pycache__
-app/__pycache__
+gubr/__pycache__
 venv
 config.py
+
+!.gitignore

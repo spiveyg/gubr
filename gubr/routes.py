@@ -23,6 +23,7 @@ def home():
     return render_template('home.html', title='Home', user=user, bills=bills)
 
 
+# login route - 
 @app.route('/login')
 def login():
     form = LoginForm()

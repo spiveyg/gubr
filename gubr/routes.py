@@ -1,4 +1,4 @@
-from flask import (render_template, flash, redirect,)
+from flask import (render_template, flash, redirect,url_for,)
 from gubr.forms import LoginForm
 from gubr import app
 
@@ -31,5 +31,5 @@ def login():
         flash(
             f'Login requested for user {form.username.data}, \
             remember_me={form.remember_me.data}')
-        return redirect('/home')
+        return redirect(url_for('home'))
     return render_template('login.html', title='Sign In', form=form)

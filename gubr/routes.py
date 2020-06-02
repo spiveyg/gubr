@@ -1,6 +1,8 @@
 from flask import render_template
-from faker import Faker
+from gubr.forms import LoginForm
 from gubr import app
+
+from faker import Faker
 
 fake = Faker()
 
@@ -19,3 +21,9 @@ def home():
         }
     ]
     return render_template('home.html', title='Home', user=user, bills=bills)
+
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - GUBR</title>
+        {% else %}
+        <title>Welcome to GUBR</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>GUBR: <a href="/home">Home</a></div>
+        <hr>
+        {% block content %} {% endblock %}
+    </body>
+</html>

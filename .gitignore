@@ -3,6 +3,7 @@
 .*
 
 __pycache__
+*.ini
 gubr/__pycache__
 venv
 config.py
